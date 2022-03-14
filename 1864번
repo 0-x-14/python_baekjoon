@@ -1,0 +1,20 @@
+oct_dict = {'-': 0,
+         '\\': 1,
+         '(': 2,
+         '@': 3,
+         '?': 4,
+         '>': 5,
+         '&': 6,
+         '%': 7,
+         '/': -1}
+
+while (1):
+    octo = input()
+    if (octo == "#"):
+        break
+    n = len(octo) - 1
+    sum = 0
+    for i in octo:
+        sum += oct_dict[i] * 8 ** n
+        n -= 1
+    print(sum)
