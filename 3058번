@@ -1,0 +1,13 @@
+test = int(input())
+
+while (test > 0):
+    num_list = list(map(int, input().split()))
+    even = []
+    sum = 0
+    for i in num_list:
+        if (i % 2 == 0):
+            even.append(i)
+            sum += i
+    even.sort()
+    test -= 1
+    print(sum, even[0])
