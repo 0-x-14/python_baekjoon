@@ -1,0 +1,15 @@
+t = int(input()) # 테스트 케이스의 개수
+
+for i in range(t):
+    blank = input()
+    n = int(input()) # 학생의 수
+    sum = 0
+
+    for i in range(n):
+        num = int(input())
+        sum += num
+
+    if (sum % n == 0):
+        print("YES")
+    else:
+        print("NO")
