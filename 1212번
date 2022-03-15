@@ -1,0 +1,40 @@
+eight = int(input())
+change = {
+    '0': '000',
+    '1': '001',
+    '2': '010',
+    '3': '011',
+    '4': '100',
+    '5': '101',
+    '6': '110',
+    '7': '111',
+    '8': '1000',
+    '9': '1001'
+}
+num_list = []
+str_eight = str(eight)
+
+for i in range(len(str_eight)):
+    num_list.append(str_eight[i])
+
+two_list = []
+
+for i in num_list:
+    two_list.append(change[i])
+
+nonZero = "".join(two_list)
+answer = list(nonZero)
+
+if (answer[0] == '0'):
+    answer.pop(0)
+
+for _ in range(len(answer)):
+    if answer[0] == '0':
+        answer.pop(0)
+    else :
+        break
+
+if (eight == 0):
+    print(0)
+else:
+    print("".join(answer))
