@@ -1,0 +1,4 @@
+ten = int(input(), 8)
+two = bin(ten)[2:]
+
+print(two)
