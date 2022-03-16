@@ -1,0 +1,11 @@
+a, b = map(int, input().split())
+sum = 0
+
+large = max(a, b)
+small = min(a, b)
+
+middle = (a + b) / 2
+sum = middle * (large - small + 1)
+int_sum = int(sum)
+
+print(int_sum)
