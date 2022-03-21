@@ -1,0 +1,32 @@
+num = int(input())
+first = []
+eng = {}
+print_list = []
+sum = 0
+
+for i in range(num):
+    player = list(input())
+    first.append(player[0])
+
+    if first[i] not in eng:
+        eng[first[i]] = 1
+    elif eng[first[i]] == 1:
+        eng[first[i]] += 1
+    elif eng[first[i]] == 2:
+        eng[first[i]] = 3
+    elif eng[first[i]] == 3:
+        eng[first[i]] = 4
+    elif eng[first[i]] == 4:
+        sum += 1
+        eng[first[i]] = 5
+        print_list.append(first[i])
+    else:
+        sum += 1
+
+print_list.sort()
+
+if sum > 0:
+    print("".join(print_list))
+
+else:
+    print("PREDAJA")
