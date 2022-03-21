@@ -1,0 +1,17 @@
+n = int(input())
+k = 1
+count = 0
+
+while(1):
+    if (n == 0):
+        break
+
+    elif (n >= k):
+        n -= k
+        k += 1
+        count += 1
+
+    else:
+        k = 1
+
+print(count)
