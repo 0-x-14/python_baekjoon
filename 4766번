@@ -1,11 +1,10 @@
 first = float(input())
 
-while(True):
+while 1:
     second = float(input())
 
     if (second == 999):
         break
 
-    else:
-        print(round(second - first, 2))
-        first = second
+    print("%.2f" % (second - first))
+    first = second
