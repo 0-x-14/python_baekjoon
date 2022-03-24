@@ -1,0 +1,11 @@
+first = float(input())
+
+while(True):
+    second = float(input())
+
+    if (second == 999):
+        break
+
+    else:
+        print(round(second - first, 2))
+        first = second
