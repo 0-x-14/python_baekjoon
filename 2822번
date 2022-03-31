@@ -1,0 +1,24 @@
+score_dic = {}
+high_list = []
+sum = 0
+print_list = []
+
+for i in range(8):
+    score = int(input())
+    score_dic[score] = i + 1
+    high_list.append(score)
+
+    if len(high_list) == 6:
+        high_list.sort()
+        high_list.pop(0)
+        # 만약 high_list의 길이가 6이 되면 정렬 후 가장 작은 값을 빼줌
+
+for i in range(5):
+    sum = sum + high_list[i]
+    print_list.append(score_dic[high_list[i]])
+
+print_list.sort()
+
+print(sum)
+for i in print_list:
+    print(i, end=' ')
