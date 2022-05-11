@@ -1,0 +1,7 @@
+n = int(input())
+str_n = str(n)
+
+re = sorted(str_n, reverse = True)
+result = "".join(re)
+
+print(result)
