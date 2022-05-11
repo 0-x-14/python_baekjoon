@@ -1,0 +1,24 @@
+n = int(input())
+count = 0
+
+for i in range(n):
+    lst = [0]
+    num = 1
+    word = input()
+
+    for j in word:
+        lst.append(j)
+        if lst[num-1] == lst[num]:
+            lst.pop()
+        else:
+            num += 1
+
+    count += 1
+
+    for j in lst:
+        cnt = lst.count(j)
+        if cnt > 1 :
+            count -= 1
+            break
+
+print(count)
